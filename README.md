@@ -6,15 +6,15 @@ Try it online at <https://demo.api-platform.com>.
 [![GitHub Actions](https://github.com/api-platform/demo/workflows/CI/badge.svg)](https://github.com/api-platform/demo/actions?workflow=CI)
 [![GitHub Actions](https://github.com/api-platform/demo/workflows/CD/badge.svg)](https://github.com/api-platform/demo/actions?workflow=CD)
 
-## Install
+## Instalação
 
 [Read the official "Getting Started" guide](https://api-platform.com/docs/distribution).
 
-    $ git clone https://github.com/api-platform/demo.git
-    $ cd demo
+    $ git clone https://github.com/wpatriota/public-systemdonation.git
+    $ cd public-systemdonation
     $ docker compose up -d
 
-You can now go to https://localhost
+Disponível em https://localhost
 
 ## What Can I Find In This Demo? 
 
