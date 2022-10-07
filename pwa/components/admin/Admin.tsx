@@ -86,7 +86,7 @@ const messages = {
 };
 const i18nProvider = polyglotI18nProvider(
   // @ts-ignore
-  (locale) => (messages[locale] ? messages[locale] : messages.en),
+  (locale) => (messages[locale] ? messages[locale] : messages.pt),
   resolveBrowserLocale(),
 );
 

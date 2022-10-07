@@ -28,7 +28,7 @@ class InstallmentsDonation
     /**
      * Doação.
      */
-    #[ORM\ManyToOne(targetEntity: Donation::class, inversedBy: 'installmentsDonation')]
+    #[ORM\ManyToOne(targetEntity: Donation::class, inversedBy: 'installmentsDonations')]
     #[ORM\JoinColumn(nullable: false)]       
     #[Assert\NotNull]    
     private ?Donation $donation = null;

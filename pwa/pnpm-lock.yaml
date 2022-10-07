@@ -22,6 +22,7 @@ specifiers:
   ra-i18n-polyglot: ^4.4.0
   ra-language-english: ^4.4.0
   ra-language-french: ^4.4.0
+  ra-language-portuguese: ^1.6.0
   react: ^18.2.0
   react-admin: ^4.4.0
   react-dom: ^18.2.0
@@ -44,6 +45,7 @@ dependencies:
   ra-i18n-polyglot: 4.4.0_6lw4fsbjmhd7lxrurg3c4k3gue
   ra-language-english: 4.4.0_6lw4fsbjmhd7lxrurg3c4k3gue
   ra-language-french: 4.4.0_6lw4fsbjmhd7lxrurg3c4k3gue
+  ra-language-portuguese: 1.6.0
   react: 18.2.0
   react-admin: 4.4.0_kunnbtlwyntza55g5v4bnmmtxy
   react-dom: 18.2.0_react@18.2.0
@@ -2815,6 +2817,10 @@ packages:
       - react-native
       - react-router
       - react-router-dom
+    dev: false
+
+  /ra-language-portuguese/1.6.0:
+    resolution: {integrity: sha512-9PAxgrisjmDOTRefjCe2y2ruYQw/iqXnXgUt09vOYUcjY4J0ctabJ4+joGI0jV/x9icF9c7Pui2USc5QDRTktQ==}
     dev: false
 
   /ra-ui-materialui/4.4.0_equcapi4qfgfdx6dmhgvlxwrxa:

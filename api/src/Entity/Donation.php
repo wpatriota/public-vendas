@@ -103,7 +103,7 @@ class Donation
         }
     }
 
-    public function removeDonation(InstallmentsDonation $installmentsDonation, bool $updateRelation = true): void
+    public function removeInstallmentsDonation(InstallmentsDonation $installmentsDonation, bool $updateRelation = true): void
     {
         $this->installmentsDonation->removeElement($installmentsDonation);
         if ($updateRelation) {
