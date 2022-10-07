@@ -23,7 +23,7 @@ class Donor
     private ?string $email = null;
 
     /**
-     * The book's reviews.
+     * Doações.
      */
     #[ORM\OneToMany(mappedBy: 'donor', targetEntity: Donation::class, cascade: ['persist', 'remove'], orphanRemoval: true)]    
     private Collection $donations;
@@ -57,6 +57,9 @@ class Donor
         return $this;
     }
 
+    /**
+     * Doações.
+     */
     public function addDonation(Donation $donation, bool $updateRelation = true): void
     {
         if ($this->donations->contains($donation)) {

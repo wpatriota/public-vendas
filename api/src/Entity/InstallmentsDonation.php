@@ -5,6 +5,7 @@ namespace App\Entity;
 use ApiPlatform\Metadata\ApiResource;
 use App\Repository\InstallmentsDonationRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: InstallmentsDonationRepository::class)]
 #[ApiResource]
@@ -23,6 +24,14 @@ class InstallmentsDonation
 
     #[ORM\Column(length: 255)]
     private ?string $status = null;
+
+    /**
+     * Doação.
+     */
+    #[ORM\ManyToOne(targetEntity: Donation::class, inversedBy: 'installmentsDonation')]
+    #[ORM\JoinColumn(nullable: false)]       
+    #[Assert\NotNull]    
+    private ?Donation $donation = null;
 
     public function getId(): ?int
     {
@@ -64,4 +73,27 @@ class InstallmentsDonation
 
         return $this;
     }
+
+    /**
+     * Doação.
+     */
+    public function setDonation(?Donation $donation, bool $updateRelation = true): void
+    {
+        $this->donation = $donation;
+        if (!$updateRelation) {
+            return;
+        }
+
+        if (null === $donation) {
+            return;
+        }
+
+        $donation->addInstallmentsDonation($this, false);
+    }
+
+    public function getDonation(): ?Donor
+    {
+        return $this->donation;
+    }
+
 }
