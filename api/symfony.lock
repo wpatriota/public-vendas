@@ -6,17 +6,16 @@
         "version": "v1.8.1"
     },
     "api-platform/core": {
-        "version": "2.6",
+        "version": "3.0",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
-            "version": "2.5",
-            "ref": "05b57782a78c21a664a42055dc11cf1954ca36bb"
+            "version": "3.0",
+            "ref": "0330386d716d3eecc52ee5ac66976e733eb8f961"
         },
         "files": [
-            "config/packages/api_platform.yaml",
             "config/routes/api_platform.yaml",
-            "src/Entity/.gitignore"
+            "src/ApiResource/.gitignore"
         ]
     },
     "api-platform/schema-generator": {
@@ -73,7 +72,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "2.4",
-            "ref": "ddddd8249dd55bbda16fa7a45bb7499ef6f8e90e"
+            "ref": "da713d006953b90d1c085c1be480ecdd6c4a95e0"
         },
         "files": [
             "config/packages/doctrine.yaml",
@@ -82,12 +81,12 @@
         ]
     },
     "doctrine/doctrine-migrations-bundle": {
-        "version": "3.1",
+        "version": "3.2",
         "recipe": {
             "repo": "github.com/symfony/recipes",
-            "branch": "master",
+            "branch": "main",
             "version": "3.1",
-            "ref": "ee609429c9ee23e22d6fa5728211768f51ed2818"
+            "ref": "1d01ec03c6ecbd67c3375c5478c9a423ae5d6a33"
         },
         "files": [
             "config/packages/doctrine_migrations.yaml",
@@ -311,6 +310,15 @@
     "sebastian/recursion-context": {
         "version": "4.0.4"
     },
+    "symfony/apache-pack": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "9d254a22efca7264203eea98b866f16f944b2f09"
+        }
+    },
     "symfony/asset": {
         "version": "v5.3.0"
     },
@@ -450,7 +458,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "0.3",
-            "ref": "e0a854b5439186e04b28fb8887b42c54f24a0d32"
+            "ref": "7c7e63c36530052a174f28a6be4e451c4709be83"
         },
         "files": [
             "config/packages/mercure.yaml"
