@@ -1,7 +1,8 @@
-<h1 align="center"><a href="https://api-platform.com"><img src="https://api-platform.com/logo-250x250.png" alt="API Platform"></a></h1>
+<h1 align="center">Sistema para gerenciar doações</h1>
 
-This application is a demonstration for the [API Platform Framework](https://api-platform.com).
-Try it online at <https://demo.api-platform.com>.
+Admin online em <https://demo.api-platform.com>.
+API online em <https://demo.api-platform.com>.
+Doador cadastro online em <https://demo.api-platform.com>.
 
 [![GitHub Actions](https://github.com/api-platform/demo/workflows/CI/badge.svg)](https://github.com/api-platform/demo/actions?workflow=CI)
 [![GitHub Actions](https://github.com/api-platform/demo/workflows/CD/badge.svg)](https://github.com/api-platform/demo/actions?workflow=CD)

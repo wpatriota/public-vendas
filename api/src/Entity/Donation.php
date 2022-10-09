@@ -122,11 +122,11 @@ class Donation
      */
     public function addInstallmentsDonation(InstallmentsDonation $installmentsDonation, bool $updateRelation = true): void
     {
-        if ($this->donations->contains($installmentsDonation)) {
+        if ($this->installmentsDonation->contains($installmentsDonation)) {
             return;
         }
 
-        $this->donations->add($installmentsDonation);
+        $this->installmentsDonation->add($installmentsDonation);
         if ($updateRelation) {
             $installmentsDonation->setDonation($this, false);
         }
