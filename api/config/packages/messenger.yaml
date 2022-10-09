@@ -13,7 +13,7 @@ framework:
         routing:
             # Route your messages to the transports
             # 'App\Message\YourMessage': async
-            App\Entity\Book: doctrine
+            #App\Entity\Book: doctrine
 
 # when@test:
 #    framework:
