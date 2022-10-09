@@ -3,7 +3,7 @@
     "env": {
       "APP_ENV": "prod",
       "APP_SECRET": {"generator": "secret"},
-      "CORS_ALLOW_ORIGIN": "https://git.heroku.com/public-api-systemdonation.git"
+      "CORS_ALLOW_ORIGIN": "https://git.heroku.com/still-plains-73153.git"
     },
     "addons": [
       "heroku-postgresql"

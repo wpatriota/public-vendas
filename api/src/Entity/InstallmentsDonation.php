@@ -6,9 +6,11 @@ use ApiPlatform\Metadata\ApiResource;
 use App\Repository\InstallmentsDonationRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\Common\Collections\Collection;
 
 #[ORM\Entity(repositoryClass: InstallmentsDonationRepository::class)]
-#[ApiResource]
+//#[ApiResource]
+#[ApiResource(routePrefix: '/api')]
 class InstallmentsDonation
 {
     #[ORM\Id]

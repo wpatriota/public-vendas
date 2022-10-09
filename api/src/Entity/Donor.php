@@ -4,11 +4,32 @@ namespace App\Entity;
 
 use ApiPlatform\Metadata\ApiResource;
 use App\Repository\DonorRepository;
+use ApiPlatform\Metadata\ApiProperty;
+use ApiPlatform\Metadata\Delete;
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Metadata\Patch;
+use ApiPlatform\Metadata\Post;
+use ApiPlatform\Metadata\Put;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\Collection;
 
 #[ORM\Entity(repositoryClass: DonorRepository::class)]
-#[ApiResource]
+#[ApiResource(
+    types: ['https://schema.org/DonateAction'],    
+    mercure: true,
+    paginationClientItemsPerPage: true,
+)]
+#[GetCollection]
+#[Post]
+#[Get]
+#[Put]
+#[Patch]
+#[Delete]
+#[Put(
+    output: false,
+    messenger: true,
+)]
 class Donor
 {
     #[ORM\Id]
@@ -17,6 +38,7 @@ class Donor
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[ApiProperty(types: ['https://schema.org/agent'])]
     private ?string $name = null;
 
     #[ORM\Column(length: 255)]

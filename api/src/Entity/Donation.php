@@ -5,11 +5,37 @@ namespace App\Entity;
 use ApiPlatform\Metadata\ApiResource;
 use App\Repository\DonationRepository;
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Metadata\ApiFilter;
+use ApiPlatform\Metadata\ApiProperty;
+use ApiPlatform\Doctrine\Orm\Filter\OrderFilter;
+use ApiPlatform\Doctrine\Orm\Filter\SearchFilter;
+use ApiPlatform\Metadata\Delete;
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Metadata\Patch;
+use ApiPlatform\Metadata\Post;
+use ApiPlatform\Metadata\Put;
+use ApiPlatform\Serializer\Filter\PropertyFilter;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Common\Collections\Collection;
 
 #[ORM\Entity(repositoryClass: DonationRepository::class)]
-#[ApiResource]
+#[ApiResource(
+    types: ['https://schema.org/DonateAction'],    
+    mercure: true,
+    paginationClientItemsPerPage: true,
+)]
+#[GetCollection]
+#[Post]
+#[Get]
+#[Put]
+#[Patch]
+#[Delete]
+#[Put(    
+    output: false,
+    messenger: true,
+)]
+
 class Donation
 {
     #[ORM\Id]
@@ -18,6 +44,7 @@ class Donation
     private ?int $id = null;
 
     #[ORM\Column]
+    #[ApiProperty(types: ['https://schema.org/price'])]
     private ?float $amount = null;
 
     #[ORM\Column(length: 255)]
@@ -29,6 +56,7 @@ class Donation
     #[ORM\ManyToOne(targetEntity: Donor::class, inversedBy: 'donations')]
     #[ORM\JoinColumn(nullable: false)]       
     #[Assert\NotNull]    
+    #[ApiProperty(types: ['https://schema.org/agent'])]
     private ?Donor $donor = null;
 
     /**
