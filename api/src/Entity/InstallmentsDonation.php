@@ -10,7 +10,8 @@ use Doctrine\Common\Collections\Collection;
 
 #[ORM\Entity(repositoryClass: InstallmentsDonationRepository::class)]
 //#[ApiResource]
-#[ApiResource(routePrefix: '/api')]
+#[ApiResource(
+)]
 class InstallmentsDonation
 {
     #[ORM\Id]

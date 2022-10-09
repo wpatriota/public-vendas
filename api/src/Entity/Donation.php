@@ -21,9 +21,10 @@ use Doctrine\Common\Collections\Collection;
 
 #[ORM\Entity(repositoryClass: DonationRepository::class)]
 #[ApiResource(
-    types: ['https://schema.org/DonateAction'],    
+    //types: ['https://schema.org/DonateAction'],    
     mercure: true,
     paginationClientItemsPerPage: true,
+    //routePrefix: '/api'
 )]
 #[GetCollection]
 #[Post]
@@ -44,7 +45,7 @@ class Donation
     private ?int $id = null;
 
     #[ORM\Column]
-    #[ApiProperty(types: ['https://schema.org/price'])]
+    //#[ApiProperty(types: ['https://schema.org/price'])]
     private ?float $amount = null;
 
     #[ORM\Column(length: 255)]
@@ -56,7 +57,7 @@ class Donation
     #[ORM\ManyToOne(targetEntity: Donor::class, inversedBy: 'donations')]
     #[ORM\JoinColumn(nullable: false)]       
     #[Assert\NotNull]    
-    #[ApiProperty(types: ['https://schema.org/agent'])]
+    //#[ApiProperty(types: ['https://schema.org/agent'])]
     private ?Donor $donor = null;
 
     /**

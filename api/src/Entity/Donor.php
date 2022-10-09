@@ -16,9 +16,10 @@ use Doctrine\Common\Collections\Collection;
 
 #[ORM\Entity(repositoryClass: DonorRepository::class)]
 #[ApiResource(
-    types: ['https://schema.org/DonateAction'],    
+    //types: ['https://schema.org/DonateAction'],    
     mercure: true,
     paginationClientItemsPerPage: true,
+    //routePrefix: '/api'
 )]
 #[GetCollection]
 #[Post]
@@ -38,7 +39,7 @@ class Donor
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    #[ApiProperty(types: ['https://schema.org/agent'])]
+    //#[ApiProperty(types: ['https://schema.org/agent'])]
     private ?string $name = null;
 
     #[ORM\Column(length: 255)]
