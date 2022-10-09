@@ -5,7 +5,7 @@ import React from "react";
 const Welcome = () => (
   <>
     <Head>
-      <title>Welcome to API Platform!</title>
+      <title>Sistema - Doações</title>
     </Head>
 
     <div className="welcome">
