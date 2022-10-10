@@ -10,17 +10,17 @@
 
 [Instalação](https://teste).
 
-    $ git clone https://github.com/wpatriota/public-systemdonation.git
-    $ cd public-systemdonation
+    $ git clone https://github.com/wpatriota/public-vendas.git
+    $ cd public-vendas
     $ docker compose up -d
 
 Disponível em https://localhost
 
 
-### Links de acesso
+### Links de acesso (HEROKU)
 
-* [Admin online em](https://public-dash-vendas.herokuapp.com/)
-* [API online em](https://public-api-vendas.herokuapp.com/)
+* [Admin online em](https://public-dash-vendas.herokuapp.com/)https://public-dash-vendas.herokuapp.com/
+* [API online em](https://public-api-vendas.herokuapp.com/)https://public-api-vendas.herokuapp.com/
 
 ## Creditos
 
