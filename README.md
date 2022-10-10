@@ -1,4 +1,4 @@
-<h1 align="center">Sistema para gerenciar doações</h1>
+<h1 align="center">Sistema para gerenciar Clientes Produtos e Vendas</h1>
 
 Admin online em <https://demo.api-platform.com>.
 API online em <https://demo.api-platform.com>.
